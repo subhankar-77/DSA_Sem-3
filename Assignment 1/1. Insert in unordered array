@@ -1,0 +1,24 @@
+#include<stdio.h>
+void main()
+{
+int n,i,pos,x;
+printf("ENTER THE NUMBER OF ELEMENTS \n");
+scanf("%d",&n);
+int ar[n+1];
+printf("The elements are: \n");
+for(i=0;i<n;i++)
+scanf("%d",&ar[i]);
+printf("Enter the position and the number\n");
+scanf("%d",&pos);
+scanf("%d",&x);
+for(i=n;i>=pos;i--)
+{
+  ar[i]=ar[i-1];
+}
+ar[pos-1]=x;
+for(i=0;i<=n;i++)
+{
+   printf("%d",ar[i]);
+
+}
+}
