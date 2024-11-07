@@ -9,7 +9,7 @@ int main ()
     int i, j, k, size1, size2;
     printf("Enter size of first array : ");
     scanf("%d", &size1);
-    arr1 = malloc (size1*sizeof(int));
+    arr1 =(int*) malloc (size1*sizeof(int));
     for(i = 0; i < size1; i++)
     {
         printf("Enter element %d of the first array ",(i+1));
@@ -17,7 +17,7 @@ int main ()
     }
         printf("Enter size of second array : ");
     scanf("%d", &size2);
-    arr2 = malloc (size2*sizeof(int));
+    arr2 = (int*)malloc (size2*sizeof(int));
     for(j = 0; j < size2; j++)
     {
         printf("Enter element %d of the second array ", (j+1));
