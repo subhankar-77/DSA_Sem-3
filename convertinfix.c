@@ -47,9 +47,9 @@ int main ()
     printf ("Expression is Valid\n");
     strcat(expression, ")");
     int n = strlen(expression);
-    postfix = malloc((n + 1) * sizeof(char));
+    postfix = (char*)malloc((n + 1) * sizeof(char));
     Stack S;
-    S.stack = malloc((n + 1) * sizeof(char));
+    S.stack = (char*)malloc((n + 1) * sizeof(char));
     S.top = -1;
     push('(', &S);
     for (int i = 0; i < n; i++) {
@@ -85,7 +85,7 @@ int isvalid (char * a)
     char c;
     int n = strlen(a);
     Stack  S ;
-    S.stack = malloc (n * sizeof(char));
+    S.stack = (char*)malloc (n * sizeof(char));
     S.top = -1;
     for (int i = 0 ; i < n ; i++)
     {
