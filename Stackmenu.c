@@ -18,7 +18,7 @@ void push (int a , Stack* S )
         if (ch == 'Y')
         {
             S->size += 100 ;
-           S->stack = realloc(S->stack, S->size *sizeof(int));
+           S->stack = (int*) realloc(S->stack, S->size *sizeof(int));
         }
         else 
            return ;
@@ -55,7 +55,7 @@ void display (Stack *S)
 int main ()
 {
     Stack S ;
-    S.stack = malloc (100 * (sizeof(int)));
+    S.stack = (int*) malloc (100 * (sizeof(int)));
     S.size = 100;
     S.top = -1;
     int ch,val ;
