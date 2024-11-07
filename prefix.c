@@ -90,7 +90,7 @@ void infixToPrefix(char* infix, char* prefix, Stack *S) {
 
 int isValid(char *exp) {
     Stack S;
-    S.stack = malloc(strlen(exp) * sizeof(char));
+    S.stack = (char*)malloc(strlen(exp) * sizeof(char));
     S.top = -1;
 
     for (int i = 0; exp[i]; i++) {
