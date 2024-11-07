@@ -18,7 +18,7 @@ void Insert (int val , Queue * Q)
         if (ch == 'Y')
         {
             Q->size += 100;
-            Q->queue = realloc(Q->queue,Q->size*sizeof(int));
+            Q->queue = (int*)realloc(Q->queue,Q->size*sizeof(int));
         }
         else
             return ;  
@@ -46,7 +46,7 @@ void Display (Queue *Q)
 int main ()
 {
     Queue Q ;
-    Q.queue = malloc (100 * (sizeof(int)));
+    Q.queue = (int*)malloc (100 * (sizeof(int)));
     Q.size = 100;
     Q.front = Q.rear = -1;
     int ch,val ;
