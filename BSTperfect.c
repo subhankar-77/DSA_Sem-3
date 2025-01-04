@@ -46,7 +46,8 @@ Leaf *Delete(Leaf *root, int key)
     } else {
         if (root->left == NULL && root->right == NULL) 
         {
-            root = NULL;
+            free (root);
+            return NULL;
         }
         else if (root->left == NULL) 
         {
